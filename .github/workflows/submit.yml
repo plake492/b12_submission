@@ -22,4 +22,4 @@ jobs:
           SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
           ACTION_RUN_LINK: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           POST_URL: ${{ secrets.POST_URL }}
-        run: python submit.py
+        run: python script.py
