@@ -8,7 +8,7 @@ import os
 
 load_dotenv()
 
-url = os.getenv("POST_URL"," http://127.0.0.1:5000/echo")
+url = os.getenv("POST_URL", "http://127.0.0.1:5000/echo")
 
 name = "Patrick Lake"
 email = "plake.dev@gmail.com"
