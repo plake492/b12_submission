@@ -8,12 +8,12 @@ import os
 
 load_dotenv()
 
-b_12_path = "https://b12.io/apply/submission"
-dev_path = "http://127.0.0.1:5000/echo"
+url = os.getenv("POST_URL"," http://127.0.0.1:5000/echo")
+
 name = "Patrick Lake"
 email = "plake.dev@gmail.com"
 resume_link = ""
-repository_link = ""
+repository_link = "https://github.com/plake492/b12_submission"
 action_run_link = ""
 now = datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
 
@@ -36,10 +36,8 @@ signature = hmac.new(
     digestmod=hashlib.sha256
 ).hexdigest()
 
-print(f"sha256={signature}")
-
 res = request.Request(
-    dev_path, 
+    url,
     data=data, 
     headers={'Content-Type': 'application/json'}
 )
