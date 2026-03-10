@@ -12,9 +12,9 @@ url = os.getenv("POST_URL"," http://127.0.0.1:5000/echo")
 
 name = "Patrick Lake"
 email = "plake.dev@gmail.com"
-resume_link = ""
+resume_link = "https://raw.githubusercontent.com/plake492/b12_submission/main/resume/patrick_lake_resume.pdf"
 repository_link = "https://github.com/plake492/b12_submission"
-action_run_link = ""
+action_run_link = os.getenv("ACTION_RUN_LINK", "")
 now = datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
 
 signing_secret = os.getenv("SIGNING_SECRET").encode("utf-8")
